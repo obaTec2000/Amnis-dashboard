@@ -21,6 +21,7 @@ import {
 // Custom components
 import Card from "components/card/Card";
 import Menu from "components/menu/MainMenu";
+
 export default function CheckTable(props) {
   const { columnsData, tableData } = props;
 
@@ -94,7 +95,7 @@ export default function CheckTable(props) {
               <Tr {...row.getRowProps()} key={index}>
                 {row.cells.map((cell, index) => {
                   let data = "";
-                  if (cell.column.Header === "NAME") {
+                  if (cell.column.Header === "ID") {
                     data = (
                       <Flex align='center'>
                         <Checkbox
@@ -107,7 +108,7 @@ export default function CheckTable(props) {
                         </Text>
                       </Flex>
                     );
-                  } else if (cell.column.Header === "PROGRESS") {
+                  } else if (cell.column.Header === "DATE") {
                     data = (
                       <Flex align='center'>
                         <Text
@@ -119,13 +120,27 @@ export default function CheckTable(props) {
                         </Text>
                       </Flex>
                     );
-                  } else if (cell.column.Header === "QUANTITY") {
+                  } else if (cell.column.Header === "Temperature") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}
                       </Text>
                     );
-                  } else if (cell.column.Header === "DATE") {
+                  } else if (cell.column.Header === "umidtty") {
+                    data = (
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
+                    );
+                  }
+                  else if (cell.column.Header === "Benezene") {
+                    data = (
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
+                    );
+                  }
+                  else if (cell.column.Header === "CarbonDioxide") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}

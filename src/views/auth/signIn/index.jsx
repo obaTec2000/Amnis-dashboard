@@ -22,6 +22,7 @@
 */
 
 import React from "react";
+import { useHistory } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
 // Chakra imports
 import {
@@ -49,6 +50,14 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { RiEyeCloseLine } from "react-icons/ri";
 
 function SignIn() {
+  const history = useHistory();
+
+  const handleSignInClick = () => {
+    // Perform any sign-in logic if needed
+
+    // Navigate to the "admin" page
+    history.push('/admin');
+  };
   // Chakra color mode
   const textColor = useColorModeValue("navy.700", "white");
   const textColorSecondary = "gray.400";
@@ -202,6 +211,7 @@ function SignIn() {
               </NavLink>
             </Flex>
             <Button
+             onClick={handleSignInClick}
               fontSize='sm'
               variant='brand'
               fontWeight='500'

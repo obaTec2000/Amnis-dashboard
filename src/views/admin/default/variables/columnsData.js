@@ -1,36 +1,53 @@
 export const columnsDataCheck = [
   {
-    Header: "NAME",
+    Header: "ID",
     accessor: "name",
   },
   {
-    Header: "PROGRESS",
+    Header: "DATE",
+    accessor: "date",
+  },
+  {
+    Header: "Temperature",
     accessor: "progress",
   },
   {
-    Header: "QUANTITY",
+    Header: "humidity",
     accessor: "quantity",
   },
   {
-    Header: "DATE",
-    accessor: "date",
+    Header: "Benezene",
+    accessor: "benzene",
+  },
+  {
+    Header: "CarbonDioxide",
+    accessor: "co",
   },
 ];
+
 export const columnsDataComplex = [
   {
-    Header: "NAME",
+    Header: "ID",
     accessor: "name",
   },
   {
-    Header: "STATUS",
-    accessor: "status",
-  },
-  {
     Header: "DATE",
     accessor: "date",
   },
   {
-    Header: "PROGRESS",
+    Header: "Temperature",
     accessor: "progress",
+  },
+  {
+    Header: "umidtty",
+    accessor: "quantity",
+  },
+  {
+    Header: "Benezene",
+    accessor: "benzene",
+  },
+  {
+    Header: "CarbonDioxide",
+    accessor: "co",
   },
 ];
